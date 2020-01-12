@@ -38,7 +38,7 @@ class Intro extends React.Component {
           <p>As you gain consciousness, you notice a small, rotating cube</p>
           <p>floating in front of you. Curious, you reach out towards it...</p>
         </div>
-        <button className={this.state.showState >= 13 ? "hidden begin" : "hidden"} onClick={() => this.props.endIntro()}>Reach Out</button>
+        <button className={this.state.showState >= 13 ? "hidden begin active" : "hidden"} onClick={() => this.props.endIntro()}>Reach Out</button>
         <div></div>
       </div>
     );

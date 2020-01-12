@@ -12,6 +12,20 @@
   color: #00c0c0;
 }
 
+p, h1 {
+  cursor: default;
+}
+
+button {
+  color: #FFFFFF;
+  background-color: #008080;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #034652;
+  border-radius: 5px;
+  width: 100px;
+}
+
 .hidden {
   transition: 1500ms all ease;
   opacity: 0;
@@ -33,14 +47,4 @@
 
 p {
   margin: 20px;
-}
-
-button {
-  color: #FFFFFF;
-  background-color: #008080;
-  font-weight: bold;
-  padding: 10px;
-  border: 2px solid #034652;
-  border-radius: 5px;
-  width: 100px;
 }

@@ -297,7 +297,8 @@ class Cube extends React.Component {
                    icons={this.state.icons}
                    introState={this.props.introState}
                    width={this.state.width}
-                   height={this.state.height}/>
+                   height={this.state.height}
+                   expand={this.state.expand}/>
   }
 }
 

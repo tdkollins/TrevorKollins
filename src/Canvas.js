@@ -79,7 +79,7 @@ class Canvas extends React.Component {
 
   render() {
     return (
-      <div className="canvasContainer">
+      <div className={!this.props.expand ? "canvasContainer" : "canvasContainer active"}>
         <canvas width={this.props.width}
               height={this.props.height}
               ref={this.canvasRef} />
