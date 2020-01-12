@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+canvasTemp.js
+cubeTemp.js
+
 # testing
 /coverage
 

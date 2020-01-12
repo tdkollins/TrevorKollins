@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Cube from "./Cube.js";
+import Intro from "./Intro.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      intro: true
+    };
+    this.endIntro = this.endIntro.bind(this);
+  }
+
+  endIntro() {
+    this.setState({intro: false});
+  }
+
+  render() {
+    if (this.state.intro) {
+      return (
+        <div className="App">
+          <Cube introState={this.state.intro}/>
+          <Intro endIntro={this.endIntro}/>
+        </div>
+      );
+    }
+    return (
+      <div className="App">
+        <Cube introState={this.state.intro}/>
+      </div>
+    );
+  }
 }
 
 export default App;
