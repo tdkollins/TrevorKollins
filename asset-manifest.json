@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TrevorKollins/static/css/main.3063e65d.chunk.css",
+    "main.css": "/TrevorKollins/static/css/main.9eb8d05d.chunk.css",
     "main.js": "/TrevorKollins/static/js/main.7233f4b3.chunk.js",
     "main.js.map": "/TrevorKollins/static/js/main.7233f4b3.chunk.js.map",
     "runtime-main.js": "/TrevorKollins/static/js/runtime-main.7be5a6d1.js",
@@ -8,15 +8,15 @@
     "static/js/2.f83b3353.chunk.js": "/TrevorKollins/static/js/2.f83b3353.chunk.js",
     "static/js/2.f83b3353.chunk.js.map": "/TrevorKollins/static/js/2.f83b3353.chunk.js.map",
     "index.html": "/TrevorKollins/index.html",
-    "precache-manifest.e157c57cfece909ebb7fb5e501b6e2f8.js": "/TrevorKollins/precache-manifest.e157c57cfece909ebb7fb5e501b6e2f8.js",
+    "precache-manifest.7d02ea1412b78f7861857aa483516faf.js": "/TrevorKollins/precache-manifest.7d02ea1412b78f7861857aa483516faf.js",
     "service-worker.js": "/TrevorKollins/service-worker.js",
-    "static/css/main.3063e65d.chunk.css.map": "/TrevorKollins/static/css/main.3063e65d.chunk.css.map",
+    "static/css/main.9eb8d05d.chunk.css.map": "/TrevorKollins/static/css/main.9eb8d05d.chunk.css.map",
     "static/js/2.f83b3353.chunk.js.LICENSE": "/TrevorKollins/static/js/2.f83b3353.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.7be5a6d1.js",
     "static/js/2.f83b3353.chunk.js",
-    "static/css/main.3063e65d.chunk.css",
+    "static/css/main.9eb8d05d.chunk.css",
     "static/js/main.7233f4b3.chunk.js"
   ]
 }
