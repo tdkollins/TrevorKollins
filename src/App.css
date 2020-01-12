@@ -8,3 +8,15 @@ html, body {
   height: 100%;
   body: 100%;
 }
+
+body {
+  scrollbar-color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}

@@ -84,7 +84,8 @@ class Cube extends React.Component {
       start: true,
       icons: icons,
       focal_length: 400,
-      expand: false
+      expand: false,
+      lastAnimated: Date.now()
     };
     this.updateAnimationState = this.updateAnimationState.bind(this);
     this.saveContext = this.saveContext.bind(this);
@@ -137,8 +138,10 @@ class Cube extends React.Component {
     var fl = this.state.focal_length;
     for (let curPoint = 0; curPoint < this.state.cube.vertices.length; ++curPoint) {
       const p = this.state.cube.vertices[curPoint];
-      const x = p.x * (fl / p.z) + document.body.clientWidth * 0.5;
-      const y = p.y * (fl / p.z) + document.body.clientHeight * 0.5;
+      // const x = p.x * (fl / p.z) + document.body.clientWidth * 0.5;
+      // const y = p.y * (fl / p.z) + document.body.clientHeight * 0.5;
+      const x = p.x * (fl / p.z) + this.state.width * 0.5;
+      const y = p.y * (fl / p.z) + this.state.height * 0.5;
       points2d.push(new Point2D(x, y));
     }
     return points2d;
@@ -242,30 +245,44 @@ class Cube extends React.Component {
     document.addEventListener('click', this.handleClick);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    let fpsInteveral = 1000 / 120;
+    if (this.state.curTime - this.state.lastAnimated > fpsInteveral) {
+      this.setState({lastAnimated: Date.now()});
+      return true;
+    }
+    return false;
+  }
+
   componentDidUpdate() {
-    if (this.state.width != document.body.clientWidth ||
-        this.state.height != document.body.clientHeight) {
+    if ((Math.abs(this.state.width - document.body.clientWidth)) > 30 ||
+       (Math.abs(this.state.height - document.body.clientHeight)) > 30) {
       this.setState({
         width: document.body.clientWidth,
         height: document.body.clientHeight
       });
       this.updateIcons();
     }
+
     for (let i = 0; i < this.state.icons.length; ++i) {
       let curIcon = this.state.icons[i];
       curIcon.increment();
     }
+
     this.changeCubeSize();
     if (this.state.start) {
-      this.state.cube.rotateX(0.5 * 0.0075);
-      this.state.cube.rotateY(0.5 * -0.005);
-      this.state.cube.rotateZ(0.5 * 0.0015);
+      // this.state.cube.rotateX(0.5 * 0.0075);
+      // this.state.cube.rotateY(0.5 * -0.005);
+      // this.state.cube.rotateZ(0.5 * 0.0015);
+      this.state.cube.rotateX(0.7 * 0.0075);
+      this.state.cube.rotateY(0.7 * -0.005);
+      this.state.cube.rotateZ(0.7 * 0.0015);
     }
   }
 
   updateAnimationState() {
-    this.setState(prevState => ({ angle: prevState.angle + 1 }));
     this.rAF = requestAnimationFrame(this.updateAnimationState);
+    this.setState({curTime: Date.now()});
   }
 
   componentWillUnmount() {
@@ -273,13 +290,14 @@ class Cube extends React.Component {
   }
 
   render() {
-    return <Canvas angle={this.state.angle}
-                   contextRef={this.saveContext}
+    return <Canvas contextRef={this.saveContext}
                    cube={this.state.cube}
                    project={this.project}
                    isFrontFacing={this.isFrontFacing}
                    icons={this.state.icons}
-                   introState={this.props.introState}/>
+                   introState={this.props.introState}
+                   width={this.state.width}
+                   height={this.state.height}/>
   }
 }
 

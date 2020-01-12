@@ -8,8 +8,6 @@ class Canvas extends React.Component {
     }
     this.canvasRef = React.createRef();
     this.updateBrightness = this.updateBrightness.bind(this);
-    this.clientWidth = document.body.clientWidth;
-    this.clientHeight = document.body.clientHeight;
   }
 
   updateBrightness(introState) {
@@ -21,14 +19,12 @@ class Canvas extends React.Component {
   }
 
   componentDidUpdate(newProps) {
-    this.clientWidth = document.body.clientWidth;
-    this.clientHeight = document.body.clientHeight;
     this.updateBrightness(newProps.introState);
     const canvas = this.canvasRef.current;
     const ctx = canvas.getContext("2d");
     ctx.filter = "brightness(" + this.state.brightness + ")";
     ctx.fillStyle = "#000000";
-    ctx.fillRect(0, 0, this.clientWidth, this.clientHeight);
+    ctx.fillRect(0, 0, newProps.width, newProps.height);
 
     const cube = newProps.cube;
 
@@ -36,7 +32,7 @@ class Canvas extends React.Component {
     // ctx.fillStyle = "#050505"; // edit this for faces
 
     var vertices = this.props.project(cube.vertices,
-      this.clientWidth, this.clientHeight);
+      newProps.width, newProps.height);
 
     for (let index = cube.faces.length - 1; index > -1; --index) {
       let face = cube.faces[index];
@@ -83,8 +79,8 @@ class Canvas extends React.Component {
   render() {
     return (
       <div>
-        <canvas width={this.clientWidth}
-              height={this.clientHeight}
+        <canvas width={this.props.width}
+              height={this.props.height}
               ref={this.canvasRef} />
       </div>
     )

@@ -1,3 +1,7 @@
+div {
+  background-color: #000000;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
