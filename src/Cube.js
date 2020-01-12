@@ -1,7 +1,6 @@
 import React from "react";
 import Canvas from "./Canvas.js"
 import Icon from "./Icon.js"
-import "./Cube.css"
 
 // Note: Some of the cube code and equations were derrived with the help of
 // https://github.com/frankarendpoth/frankarendpoth.github.io/blob/master/content/pop-vlog/javascript/2018/013-cube/cube.html
