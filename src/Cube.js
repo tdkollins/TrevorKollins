@@ -77,7 +77,7 @@ class Cube extends React.Component {
     super(props);
     var curZ = 300;
     var curWidth = 200;
-    if (document.body.clientWidth < 500) {
+    if (document.body.clientWidth < 500 || document.body.clientHeight < 400) {
       curZ = 200;
       curWidth = 100;
     }
@@ -101,7 +101,7 @@ class Cube extends React.Component {
 
   setupIcons() {
     var icons = [];
-    if (document.body.clientWidth >= 500) {
+    if (document.body.clientWidth >= 500 && document.body.clientHeight >= 400) {
       icons.push(new Icon("githubLogo.png",
         (document.body.clientWidth / 2) - 30,
         (document.body.clientHeight / 2) - 80,
@@ -141,7 +141,7 @@ class Cube extends React.Component {
 
   updateIcons() {
     var icons = this.state.icons;
-    if (this.state.width >= 500) { // desktop
+    if (this.state.width >= 500 && this.state.height >= 400) { // desktop
       icons[0].originX = (document.body.clientWidth / 2) - 30;
       icons[0].originY = (document.body.clientHeight / 2) - 80;
       icons[1].originX = (document.body.clientWidth / 2) - 75;
