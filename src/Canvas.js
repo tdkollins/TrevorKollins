@@ -14,7 +14,7 @@ class Canvas extends React.Component {
   updateBrightness(introState) {
     if (!introState) {
       if (this.state.brightness < 1) {
-        this.setState({brightness: this.state.brightness + 0.02});
+        this.state.brightness = this.state.brightness + 0.02;
       }
     }
   }
