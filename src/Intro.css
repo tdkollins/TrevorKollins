@@ -1,7 +1,7 @@
 .intro {
   display: flex;
   flex-direction: column;
-  font-size: 26px;
+  /* font-size: 26px; */
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -11,6 +11,18 @@
   left: 0;
   color: #00c0c0;
   min-width: 800px;
+}
+
+@media screen and (min-width: 301px) {
+  div.intro {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  div.example {
+    font-size: 10px;
+  }
 }
 
 p, h1 {
@@ -37,6 +49,18 @@ button {
 
 .title {
   font-size: 60px;
+}
+
+@media screen and (min-width: 301px) {
+  div.title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  div.example {
+    font-size: 16px;
+  }
 }
 
 .descript, .begin, .title {
