@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/TrevorKollins/static/css/main.a90a3d63.chunk.css",
-    "main.js": "/TrevorKollins/static/js/main.e5549677.chunk.js",
-    "main.js.map": "/TrevorKollins/static/js/main.e5549677.chunk.js.map",
+    "main.css": "/TrevorKollins/static/css/main.475e48d5.chunk.css",
+    "main.js": "/TrevorKollins/static/js/main.a0c1f859.chunk.js",
+    "main.js.map": "/TrevorKollins/static/js/main.a0c1f859.chunk.js.map",
     "runtime-main.js": "/TrevorKollins/static/js/runtime-main.7be5a6d1.js",
     "runtime-main.js.map": "/TrevorKollins/static/js/runtime-main.7be5a6d1.js.map",
     "static/js/2.f83b3353.chunk.js": "/TrevorKollins/static/js/2.f83b3353.chunk.js",
     "static/js/2.f83b3353.chunk.js.map": "/TrevorKollins/static/js/2.f83b3353.chunk.js.map",
     "index.html": "/TrevorKollins/index.html",
-    "precache-manifest.02b73c9e7a4ef243816dfcb38a50cadd.js": "/TrevorKollins/precache-manifest.02b73c9e7a4ef243816dfcb38a50cadd.js",
+    "precache-manifest.66e34993558164cbe115014517550401.js": "/TrevorKollins/precache-manifest.66e34993558164cbe115014517550401.js",
     "service-worker.js": "/TrevorKollins/service-worker.js",
-    "static/css/main.a90a3d63.chunk.css.map": "/TrevorKollins/static/css/main.a90a3d63.chunk.css.map",
+    "static/css/main.475e48d5.chunk.css.map": "/TrevorKollins/static/css/main.475e48d5.chunk.css.map",
     "static/js/2.f83b3353.chunk.js.LICENSE": "/TrevorKollins/static/js/2.f83b3353.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.7be5a6d1.js",
     "static/js/2.f83b3353.chunk.js",
-    "static/css/main.a90a3d63.chunk.css",
-    "static/js/main.e5549677.chunk.js"
+    "static/css/main.475e48d5.chunk.css",
+    "static/js/main.a0c1f859.chunk.js"
   ]
 }
