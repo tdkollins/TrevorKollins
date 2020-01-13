@@ -115,14 +115,16 @@ class Cube extends React.Component {
   }
 
   updateIcons() {
-    this.state.icons[0].originX = (document.body.clientWidth / 2) - 30;
-    this.state.icons[0].originY = (document.body.clientHeight / 2) - 80;
-    this.state.icons[1].originX = (document.body.clientWidth / 2) - 75;
-    this.state.icons[1].originY = (document.body.clientHeight / 2) + 30;
-    this.state.icons[2].originX = (document.body.clientWidth / 2) + 60;
-    this.state.icons[2].originY = (document.body.clientHeight / 2);
-    this.state.icons[3].originX = (document.body.clientWidth / 2) + 40;
-    this.state.icons[3].originY = (document.body.clientHeight / 2) + 75;
+    var icons = this.state.icons;
+    icons[0].originX = (document.body.clientWidth / 2) - 30;
+    icons[0].originY = (document.body.clientHeight / 2) - 80;
+    icons[1].originX = (document.body.clientWidth / 2) - 75;
+    icons[1].originY = (document.body.clientHeight / 2) + 30;
+    icons[2].originX = (document.body.clientWidth / 2) + 60;
+    icons[2].originY = (document.body.clientHeight / 2);
+    icons[3].originX = (document.body.clientWidth / 2) + 40;
+    icons[3].originY = (document.body.clientHeight / 2) + 75;
+    this.setState({icons: icons});
   }
 
   saveContext(ctx) {
@@ -208,7 +210,6 @@ class Cube extends React.Component {
     if (this.state.expand) {
       let curIcon = this.state.icons[0];
       let closestIcon = curIcon;
-      var curClosest = this.state.icons[0];
       var minDistance = this.calculateDistance(e.x, e.y,
         curIcon.x + (curIcon.width / 2), curIcon.y + (curIcon.width / 2));
 
@@ -229,11 +230,11 @@ class Cube extends React.Component {
   changeCubeSize() {
     if (this.state.expand) {
       if (this.state.focal_length < 420) {
-        this.state.focal_length += 4;
+        this.setState({focal_length: this.state.focal_length + 4});
       }
     } else {
       if (this.state.focal_length > 400) {
-        this.state.focal_length -= 4;
+        this.setState({focal_length: this.state.focal_length - 4});
       }
     }
   }
