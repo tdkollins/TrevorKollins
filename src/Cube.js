@@ -75,11 +75,17 @@ CubeData.prototype = {
 class Cube extends React.Component {
   constructor(props) {
     super(props);
+    var curZ = 300;
+    var curWidth = 200;
+    if (document.body.clientWidth < 500) {
+      curZ = 200;
+      curWidth = 100;
+    }
     var icons = this.setupIcons();
     this.state = {
       width: document.body.clientWidth,
       height: document.body.clientHeight,
-      cube: new CubeData(0, 0, 300, 200),
+      cube: new CubeData(0, 0, curZ, curWidth),
       start: true,
       icons: icons,
       focal_length: 400,
@@ -95,35 +101,65 @@ class Cube extends React.Component {
 
   setupIcons() {
     var icons = [];
-    icons.push(new Icon("githubLogo.png",
-      (document.body.clientWidth / 2) - 30,
-      (document.body.clientHeight / 2) - 80,
-      "https://github.com/tdkollins"));
-    icons.push(new Icon("linkedinLogo.png",
-      (document.body.clientWidth / 2) - 75,
-      (document.body.clientHeight / 2) + 30,
-      "https://www.linkedin.com/in/trevor-kollins-ab3635178/?originalSubdomain=ca"));
-    icons.push(new Icon("devpostLogo.png",
-      (document.body.clientWidth / 2) + 60,
-      (document.body.clientHeight / 2),
-      "https://devpost.com/tdkollin?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"));
-    icons.push(new Icon("resume.png",
-      (document.body.clientWidth / 2) + 40,
-      (document.body.clientHeight / 2) + 75,
-      "Trevor Kollins.pdf"));
+    if (document.body.clientWidth >= 500) {
+      icons.push(new Icon("githubLogo.png",
+        (document.body.clientWidth / 2) - 30,
+        (document.body.clientHeight / 2) - 80,
+        "https://github.com/tdkollins"));
+      icons.push(new Icon("linkedinLogo.png",
+        (document.body.clientWidth / 2) - 75,
+        (document.body.clientHeight / 2) + 30,
+        "https://www.linkedin.com/in/trevor-kollins-ab3635178/?originalSubdomain=ca"));
+      icons.push(new Icon("devpostLogo.png",
+        (document.body.clientWidth / 2) + 70,
+        (document.body.clientHeight / 2) - 20,
+        "https://devpost.com/tdkollin?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"));
+      icons.push(new Icon("resume.png",
+        (document.body.clientWidth / 2) + 40,
+        (document.body.clientHeight / 2) + 75,
+        "Trevor Kollins.pdf"));
+    } else {
+      icons.push(new Icon("githubLogo.png",
+        (document.body.clientWidth / 2) - 30,
+        (document.body.clientHeight / 2) - 50,
+        "https://github.com/tdkollins"));
+      icons.push(new Icon("linkedinLogo.png",
+        (document.body.clientWidth / 2) - 35,
+        (document.body.clientHeight / 2) + 30,
+        "https://www.linkedin.com/in/trevor-kollins-ab3635178/?originalSubdomain=ca"));
+      icons.push(new Icon("devpostLogo.png",
+        (document.body.clientWidth / 2) + 40,
+        (document.body.clientHeight / 2) - 20,
+        "https://devpost.com/tdkollin?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"));
+      icons.push(new Icon("resume.png",
+        (document.body.clientWidth / 2) + 40,
+        (document.body.clientHeight / 2) + 55,
+        "Trevor Kollins.pdf"));
+    }
     return icons;
   }
 
   updateIcons() {
     var icons = this.state.icons;
-    icons[0].originX = (document.body.clientWidth / 2) - 30;
-    icons[0].originY = (document.body.clientHeight / 2) - 80;
-    icons[1].originX = (document.body.clientWidth / 2) - 75;
-    icons[1].originY = (document.body.clientHeight / 2) + 30;
-    icons[2].originX = (document.body.clientWidth / 2) + 60;
-    icons[2].originY = (document.body.clientHeight / 2);
-    icons[3].originX = (document.body.clientWidth / 2) + 40;
-    icons[3].originY = (document.body.clientHeight / 2) + 75;
+    if (this.state.width >= 500) { // desktop
+      icons[0].originX = (document.body.clientWidth / 2) - 30;
+      icons[0].originY = (document.body.clientHeight / 2) - 80;
+      icons[1].originX = (document.body.clientWidth / 2) - 75;
+      icons[1].originY = (document.body.clientHeight / 2) + 30;
+      icons[2].originX = (document.body.clientWidth / 2) + 70;
+      icons[2].originY = (document.body.clientHeight / 2) - 20;
+      icons[3].originX = (document.body.clientWidth / 2) + 40;
+      icons[3].originY = (document.body.clientHeight / 2) + 75;
+    } else { // mobile
+      icons[0].originX = (document.body.clientWidth / 2) - 30;
+      icons[0].originY = (document.body.clientHeight / 2) - 50;
+      icons[1].originX = (document.body.clientWidth / 2) - 35;
+      icons[1].originY = (document.body.clientHeight / 2) + 30;
+      icons[2].originX = (document.body.clientWidth / 2) + 40;
+      icons[2].originY = (document.body.clientHeight / 2) - 20;
+      icons[3].originX = (document.body.clientWidth / 2) + 40;
+      icons[3].originY = (document.body.clientHeight / 2) + 55;
+    }
     this.setState({icons: icons});
   }
 
