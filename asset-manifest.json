@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/TrevorKollins/static/css/main.c7fb99e1.chunk.css",
-    "main.js": "/TrevorKollins/static/js/main.6046f997.chunk.js",
-    "main.js.map": "/TrevorKollins/static/js/main.6046f997.chunk.js.map",
+    "main.css": "/TrevorKollins/static/css/main.84242bda.chunk.css",
+    "main.js": "/TrevorKollins/static/js/main.d6174b97.chunk.js",
+    "main.js.map": "/TrevorKollins/static/js/main.d6174b97.chunk.js.map",
     "runtime-main.js": "/TrevorKollins/static/js/runtime-main.7be5a6d1.js",
     "runtime-main.js.map": "/TrevorKollins/static/js/runtime-main.7be5a6d1.js.map",
-    "static/js/2.f83b3353.chunk.js": "/TrevorKollins/static/js/2.f83b3353.chunk.js",
-    "static/js/2.f83b3353.chunk.js.map": "/TrevorKollins/static/js/2.f83b3353.chunk.js.map",
+    "static/js/2.9c950195.chunk.js": "/TrevorKollins/static/js/2.9c950195.chunk.js",
+    "static/js/2.9c950195.chunk.js.map": "/TrevorKollins/static/js/2.9c950195.chunk.js.map",
     "index.html": "/TrevorKollins/index.html",
-    "precache-manifest.74b50e09e0221c959fdfa594a5f47ea0.js": "/TrevorKollins/precache-manifest.74b50e09e0221c959fdfa594a5f47ea0.js",
+    "precache-manifest.87b4a59f174a2c3dd6756d126dee222a.js": "/TrevorKollins/precache-manifest.87b4a59f174a2c3dd6756d126dee222a.js",
     "service-worker.js": "/TrevorKollins/service-worker.js",
-    "static/css/main.c7fb99e1.chunk.css.map": "/TrevorKollins/static/css/main.c7fb99e1.chunk.css.map",
-    "static/js/2.f83b3353.chunk.js.LICENSE": "/TrevorKollins/static/js/2.f83b3353.chunk.js.LICENSE"
+    "static/css/main.84242bda.chunk.css.map": "/TrevorKollins/static/css/main.84242bda.chunk.css.map",
+    "static/js/2.9c950195.chunk.js.LICENSE": "/TrevorKollins/static/js/2.9c950195.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.7be5a6d1.js",
-    "static/js/2.f83b3353.chunk.js",
-    "static/css/main.c7fb99e1.chunk.css",
-    "static/js/main.6046f997.chunk.js"
+    "static/js/2.9c950195.chunk.js",
+    "static/css/main.84242bda.chunk.css",
+    "static/js/main.d6174b97.chunk.js"
   ]
 }
