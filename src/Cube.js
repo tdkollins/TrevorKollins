@@ -102,39 +102,39 @@ class Cube extends React.Component {
   setupIcons() {
     var icons = [];
     if (document.body.clientWidth >= 500 && document.body.clientHeight >= 400) {
-      icons.push(new Icon("githubLogo.png",
+      icons.push(new Icon(process.env.PUBLIC_URL + "/githubLogo.png",
         (document.body.clientWidth / 2) - 30,
         (document.body.clientHeight / 2) - 80,
         "https://github.com/tdkollins"));
-      icons.push(new Icon("linkedinLogo.png",
+      icons.push(new Icon(process.env.PUBLIC_URL + "/linkedinLogo.png",
         (document.body.clientWidth / 2) - 75,
         (document.body.clientHeight / 2) + 30,
         "https://www.linkedin.com/in/trevor-kollins-ab3635178/?originalSubdomain=ca"));
-      icons.push(new Icon("devpostLogo.png",
+      icons.push(new Icon(process.env.PUBLIC_URL + "/devpostLogo.png",
         (document.body.clientWidth / 2) + 70,
         (document.body.clientHeight / 2) - 20,
         "https://devpost.com/tdkollin?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"));
-      icons.push(new Icon("resume.png",
+      icons.push(new Icon(process.env.PUBLIC_URL + "/resume.png",
         (document.body.clientWidth / 2) + 40,
         (document.body.clientHeight / 2) + 75,
-        "Trevor Kollins.pdf"));
+        process.env.PUBLIC_URL + "/Trevor Kollins.pdf"));
     } else {
-      icons.push(new Icon("githubLogo.png",
+      icons.push(new Icon(process.env.PUBLIC_URL + "/githubLogo.png",
         (document.body.clientWidth / 2) - 30,
         (document.body.clientHeight / 2) - 50,
         "https://github.com/tdkollins"));
-      icons.push(new Icon("linkedinLogo.png",
+      icons.push(new Icon(process.env.PUBLIC_URL + "/linkedinLogo.png",
         (document.body.clientWidth / 2) - 35,
         (document.body.clientHeight / 2) + 30,
         "https://www.linkedin.com/in/trevor-kollins-ab3635178/?originalSubdomain=ca"));
-      icons.push(new Icon("devpostLogo.png",
+      icons.push(new Icon(process.env.PUBLIC_URL + "/devpostLogo.png",
         (document.body.clientWidth / 2) + 40,
         (document.body.clientHeight / 2) - 20,
         "https://devpost.com/tdkollin?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"));
-      icons.push(new Icon("resume.png",
+      icons.push(new Icon(process.env.PUBLIC_URL + "/resume.png",
         (document.body.clientWidth / 2) + 40,
         (document.body.clientHeight / 2) + 55,
-        "Trevor Kollins.pdf"));
+        process.env.PUBLIC_URL + "/Trevor Kollins.pdf"));
     }
     return icons;
   }
